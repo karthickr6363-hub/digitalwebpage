@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - Digital Marketing Services</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Choose from our flexible pricing plans for digital marketing services. Basic, Standard, and Premium packages available.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="favicon.svg" alt="Digital Marketing Agency" style="width: 40px; height: 40px;">
+                <span>DigitalPro</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html" class="active">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            </ul>
+            
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+                <div class="hero-text animate-fadeInUp">
+                    <h1>Choose Your Perfect Plan</h1>
+                    <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">Flexible pricing plans designed to meet your business needs and budget. Start with our Basic plan or go all-in with Premium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Toggle -->
+    <section class="section">
+        <div class="container">
+            <div class="pricing-toggle-container text-center">
+                <div class="pricing-toggle">
+                    <span class="toggle-label">Monthly</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="pricingToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label">Yearly <span class="discount-badge">Save 20%</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <p>Perfect for small businesses getting started</p>
+                        <div class="pricing-price">
+                            <span class="price-monthly">$1,500</span>
+                            <span class="price-yearly" style="display: none;">$1,200</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> SEO Audit & Strategy</li>
+                            <li><i class="fas fa-check"></i> 5 Keyword Research</li>
+                            <li><i class="fas fa-check"></i> On-Page Optimization</li>
+                            <li><i class="fas fa-check"></i> Google My Business Setup</li>
+                            <li><i class="fas fa-check"></i> Monthly Performance Report</li>
+                            <li><i class="fas fa-check"></i> Email Support</li>
+                            <li><i class="fas fa-check"></i> 1 Website Review</li>
+                            <li><i class="fas fa-check"></i> Basic Analytics Setup</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-footer">
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Standard Plan -->
+                <div class="pricing-card featured fade-in">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Standard</h3>
+                        <p>Ideal for growing businesses</p>
+                        <div class="pricing-price">
+                            <span class="price-monthly">$3,500</span>
+                            <span class="price-yearly" style="display: none;">$2,800</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Basic</li>
+                            <li><i class="fas fa-check"></i> 15 Keyword Research</li>
+                            <li><i class="fas fa-check"></i> Technical SEO</li>
+                            <li><i class="fas fa-check"></i> Content Marketing (4 posts)</li>
+                            <li><i class="fas fa-check"></i> Google Ads Management</li>
+                            <li><i class="fas fa-check"></i> Social Media Management</li>
+                            <li><i class="fas fa-check"></i> Link Building (5 links)</li>
+                            <li><i class="fas fa-check"></i> Weekly Performance Report</li>
+                            <li><i class="fas fa-check"></i> Phone & Email Support</li>
+                            <li><i class="fas fa-check"></i> Monthly Strategy Call</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-footer">
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <p>Complete solution for established businesses</p>
+                        <div class="pricing-price">
+                            <span class="price-monthly">$6,500</span>
+                            <span class="price-yearly" style="display: none;">$5,200</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Standard</li>
+                            <li><i class="fas fa-check"></i> 30 Keyword Research</li>
+                            <li><i class="fas fa-check"></i> Advanced Technical SEO</li>
+                            <li><i class="fas fa-check"></i> Content Marketing (8 posts)</li>
+                            <li><i class="fas fa-check"></i> Multi-Channel PPC</li>
+                            <li><i class="fas fa-check"></i> Social Media Advertising</li>
+                            <li><i class="fas fa-check"></i> Email Marketing</li>
+                            <li><i class="fas fa-check"></i> Link Building (15 links)</li>
+                            <li><i class="fas fa-check"></i> Weekly Performance Report</li>
+                            <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
+                            <li><i class="fas fa-check"></i> Priority Support</li>
+                            <li><i class="fas fa-check"></i> Bi-weekly Strategy Calls</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pricing-footer">
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-on Services -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Add-on Services</h2>
+                <p class="section-subtitle">Enhance your plan with additional services</p>
+            </div>
+            
+            <div class="grid-3">
+                <div class="addon-card card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Production</h3>
+                    <p>Professional video content for marketing campaigns and social media.</p>
+                    <div class="addon-price">Starting at $2,500</div>
+                    <a href="contact.html" class="btn btn-secondary">Learn More</a>
+                </div>
+                
+                <div class="addon-card card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Web Design & Development</h3>
+                    <p>Custom website design and development services.</p>
+                    <div class="addon-price">Starting at $3,500</div>
+                    <a href="contact.html" class="btn btn-secondary">Learn More</a>
+                </div>
+                
+                <div class="addon-card card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Marketing</h3>
+                    <p>Automated email campaigns and newsletter management.</p>
+                    <div class="addon-price">Starting at $800/month</div>
+                    <a href="contact.html" class="btn btn-secondary">Learn More</a>
+                </div>
+                
+                <div class="addon-card card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Custom dashboards and advanced reporting.</p>
+                    <div class="addon-price">Starting at $500/month</div>
+                    <a href="contact.html" class="btn btn-secondary">Learn More</a>
+                </div>
+                
+                <div class="addon-card card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Marketing</h3>
+                    <p>ASO and mobile app promotion services.</p>
+                    <div class="addon-price">Starting at $1,500/month</div>
+                    <a href="contact.html" class="btn btn-secondary">Learn More</a>
+                </div>
+                
+                <div class="addon-card card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Influencer Marketing</h3>
+                    <p>Strategic influencer partnerships and campaigns.</p>
+                    <div class="addon-price">Starting at $2,000/month</div>
+                    <a href="contact.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Plan Comparison</h2>
+                <p class="section-subtitle">Compare features across all our pricing plans</p>
+            </div>
+            
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Basic</th>
+                            <th>Standard</th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SEO Audit & Strategy</td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Keyword Research</td>
+                            <td>5 keywords</td>
+                            <td>15 keywords</td>
+                            <td>30 keywords</td>
+                        </tr>
+                        <tr>
+                            <td>On-Page Optimization</td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Technical SEO</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Content Marketing</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td>4 posts/month</td>
+                            <td>8 posts/month</td>
+                        </tr>
+                        <tr>
+                            <td>Google Ads Management</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Social Media Management</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Email Marketing</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Link Building</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td>5 links/month</td>
+                            <td>15 links/month</td>
+                        </tr>
+                        <tr>
+                            <td>Reporting Frequency</td>
+                            <td>Monthly</td>
+                            <td>Weekly</td>
+                            <td>Weekly</td>
+                        </tr>
+                        <tr>
+                            <td>Support Level</td>
+                            <td>Email</td>
+                            <td>Phone & Email</td>
+                            <td>Priority Support</td>
+                        </tr>
+                        <tr>
+                            <td>Account Manager</td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-times text-danger"></i></td>
+                            <td><i class="fas fa-check text-success"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Get answers to common questions about our pricing and services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Can I change my plan at any time?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle. Contact our support team to make changes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Is there a setup fee?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No setup fees for any of our plans. You only pay the monthly subscription fee. We believe in transparent pricing with no hidden costs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>What's included in the monthly reports?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Monthly reports include traffic analysis, keyword rankings, conversion metrics, and actionable recommendations for improvement.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Do you offer custom packages?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer custom packages for enterprise clients with specific needs. Contact us to discuss your requirements and get a custom quote.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>What's your cancellation policy?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can cancel your subscription at any time with 30 days notice. No cancellation fees or long-term contracts required.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>How quickly will I see results?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SEO results typically take 3-6 months to show significant improvements. PPC and social media campaigns can show results within the first month.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: var(--gradient); color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Ready to Get Started?</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Choose your plan and start growing your business today</p>
+            </div>
+            
+            <div class="text-center">
+                <a href="contact.html" class="btn btn-white">
+                    <i class="fas fa-rocket"></i>
+                    Get Free Consultation
+                </a>
+                <a href="services.html" class="btn btn-outline-white">
+                    <i class="fas fa-cogs"></i>
+                    View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DigitalPro</h3>
+                    <p>We're a full-service digital marketing agency helping businesses grow their online presence through strategic SEO, compelling content, and data-driven marketing campaigns.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><img class="social-icon" src="https://logo.clearbit.com/facebook.com?size=28" alt="Facebook" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="Twitter/X"><img class="social-icon" src="https://logo.clearbit.com/x.com?size=28" alt="X" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="LinkedIn"><img class="social-icon" src="https://logo.clearbit.com/linkedin.com?size=28" alt="LinkedIn" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="Instagram"><img class="social-icon" src="https://logo.clearbit.com/instagram.com?size=28" alt="Instagram" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="YouTube"><img class="social-icon" src="https://logo.clearbit.com/youtube.com?size=28" alt="YouTube" referrerpolicy="no-referrer"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#seo">SEO Optimization</a></li>
+                        <li><a href="services.html#ppc">PPC Advertising</a></li>
+                        <li><a href="services.html#social">Social Media Marketing</a></li>
+                        <li><a href="services.html#content">Content Marketing</a></li>
+                        <li><a href="services.html#email">Email Marketing</a></li>
+                        <li><a href="services.html#design">Web Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest digital marketing tips and insights.</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Enter your email" required class="form-input">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> DigitalPro. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Pricing toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('pricingToggle');
+            const monthlyPrices = document.querySelectorAll('.price-monthly');
+            const yearlyPrices = document.querySelectorAll('.price-yearly');
+            
+            if (toggle) {
+                toggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        // Show yearly prices
+                        monthlyPrices.forEach(el => el.style.display = 'none');
+                        yearlyPrices.forEach(el => el.style.display = 'inline');
+                    } else {
+                        // Show monthly prices
+                        monthlyPrices.forEach(el => el.style.display = 'inline');
+                        yearlyPrices.forEach(el => el.style.display = 'none');
+                    }
+                });
+            }
+
+            // FAQ functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                
+                question.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(faq => {
+                        faq.classList.remove('active');
+                        faq.querySelector('.faq-answer').style.maxHeight = '0';
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+

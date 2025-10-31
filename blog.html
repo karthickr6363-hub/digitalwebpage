@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Insights - Digital Marketing Tips & Strategies</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Stay updated with the latest digital marketing trends, SEO tips, and strategies from our expert team.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="favicon.svg" alt="Digital Marketing Agency" style="width: 40px; height: 40px;">
+                <span>DigitalPro</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            </ul>
+            
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+                <div class="hero-text animate-fadeInUp">
+                    <h1>Digital Marketing Insights</h1>
+                    <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">Stay ahead of the curve with the latest digital marketing trends, SEO tips, and proven strategies from our expert team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-search-container">
+                <div class="search-box">
+                    <input type="text" id="blogSearch" placeholder="Search articles..." class="form-input">
+                    <button type="button" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-filter="all">All Articles</button>
+                    <button class="filter-btn" data-filter="seo">SEO</button>
+                    <button class="filter-btn" data-filter="ppc">PPC</button>
+                    <button class="filter-btn" data-filter="social">Social Media</button>
+                    <button class="filter-btn" data-filter="content">Content Marketing</button>
+                    <button class="filter-btn" data-filter="analytics">Analytics</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Article 1 -->
+                <article class="blog-card fade-in" data-category="seo">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Keyword Research">
+                        <span class="article-category seo">SEO</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>10 Essential Keyword Research Tools for 2024</h3>
+                        <p>Discover the best keyword research tools that will help you find profitable keywords and outrank your competitors.</p>
+                        <div class="article-meta">
+                            <span class="author"> Johnson</span>
+                            <span class="date">March 12, 2024</span>
+                            <span class="read-time">5 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card fade-in" data-category="ppc">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Google Ads">
+                        <span class="article-category ppc">PPC</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Google Ads Performance Max: A Complete Guide</h3>
+                        <p>Learn how to optimize your Performance Max campaigns for maximum ROI and better conversion rates.</p>
+                        <div class="article-meta">
+                            <span class="author">Mike Davis</span>
+                            <span class="date">March 10, 2024</span>
+                            <span class="read-time">7 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card fade-in" data-category="social">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Social Media">
+                        <span class="article-category social">Social Media</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Instagram Reels Strategy for Business Growth</h3>
+                        <p>Master Instagram Reels to increase brand awareness, engagement, and drive more sales for your business.</p>
+                        <div class="article-meta">
+                            <span class="author">Emily Chen</span>
+                            <span class="date">March 8, 2024</span>
+                            <span class="read-time">6 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card fade-in" data-category="content">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Content Marketing">
+                        <span class="article-category content">Content Marketing</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Content Calendar Planning: A Step-by-Step Guide</h3>
+                        <p>Create an effective content calendar that aligns with your business goals and engages your target audience.</p>
+                        <div class="article-meta">
+                            <span class="author">John Smith</span>
+                            <span class="date">March 5, 2024</span>
+                            <span class="read-time">9 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card fade-in" data-category="analytics">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Analytics">
+                        <span class="article-category analytics">Analytics</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Google Analytics 4: Advanced Features You Should Use</h3>
+                        <p>Unlock the power of GA4 with these advanced features that will give you deeper insights into audience behavior.</p>
+                        <div class="article-meta">
+                            <span class="author">Sarah Johnson</span>
+                            <span class="date">March 3, 2024</span>
+                            <span class="read-time">8 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card fade-in" data-category="seo">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Technical SEO">
+                        <span class="article-category seo">SEO</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Technical SEO Checklist for 2024 & Beyond</h3>
+                        <p>A comprehensive technical SEO checklist to ensure your website is optimized for search engines experience</p>
+                        <div class="article-meta">
+                            <span class="author">Mike Davis</span>
+                            <span class="date">March 1, 2024</span>
+                            <span class="read-time">10 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 7 -->
+                <article class="blog-card fade-in" data-category="ppc">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Facebook Ads">
+                        <span class="article-category ppc">PPC</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Facebook Ads Optimization: 15 Proven Strategies</h3>
+                        <p>Learn proven strategies to optimize your Facebook ad campaigns and achieve better results with lower costs.</p>
+                        <div class="article-meta">
+                            <span class="author">Emily Chen</span>
+                            <span class="date">February 28, 2024</span>
+                            <span class="read-time">6 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 8 -->
+                <article class="blog-card fade-in" data-category="social">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LinkedIn Marketing">
+                        <span class="article-category social">Social Media</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>LinkedIn Marketing for B2B Companies & Beyond</h3>
+                        <p>Effective LinkedIn marketing strategies to generate leads and business build professional relationships your business</p>
+                        <div class="article-meta">
+                            <span class="author">John Smith</span>
+                            <span class="date">February 25, 2024</span>
+                            <span class="read-time">7 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 9 -->
+                <article class="blog-card fade-in" data-category="content">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Marketing">
+                        <span class="article-category content">Content Marketing</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Video Marketing Trends That Will Dominate 2024</h3>
+                        <p>Stay ahead of the competition with these video marketing trends that will shape the digital landscape in 2024.</p>
+                        <div class="article-meta">
+                            <span class="author">Johnson</span>
+                            <span class="date">February 22, 2024</span>
+                            <span class="read-time">5 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center" style="margin-top: 3rem;">
+                <button class="btn btn-secondary load-more-btn">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="section" style="background: var(--gradient); color: white;">
+        <div class="container">
+            <div class="newsletter-signup">
+                <div class="newsletter-content">
+                    <h2 style="color: white;">Stay Updated with Latest Insights</h2>
+                    <p style="color: rgba(255,255,255,0.9);">Get the latest digital marketing tips, trends, and strategies delivered straight to your inbox.</p>
+                </div>
+                <form id="blogNewsletterForm" class="newsletter-form">
+                    <input type="email" name="email" placeholder="Enter your email address" required class="form-input">
+                    <button type="submit" class="btn btn-accent" style="background: white; color: var(--primary);">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Categories -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Categories</h2>
+                <p class="section-subtitle">Explore articles by topic</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card fade-in">
+                    <div class="category-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO</h3>
+                    <p>Search engine optimization tips, strategies, and best practices</p>
+                    <span class="article-count">24 Articles</span>
+                </div>
+                
+                <div class="category-card fade-in">
+                    <div class="category-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3>PPC Advertising</h3>
+                    <p>Pay-per-click advertising strategies for Google, Facebook, and more</p>
+                    <span class="article-count">18 Articles</span>
+                </div>
+                
+                <div class="category-card fade-in">
+                    <div class="category-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social Media</h3>
+                    <p>Social media marketing strategies and platform-specific tips</p>
+                    <span class="article-count">22 Articles</span>
+                </div>
+                
+                <div class="category-card fade-in">
+                    <div class="category-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Content Marketing</h3>
+                    <p>Content creation, strategy, and optimization techniques</p>
+                    <span class="article-count">16 Articles</span>
+                </div>
+                
+                <div class="category-card fade-in">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics</h3>
+                    <p>Data analysis, reporting, and performance measurement</p>
+                    <span class="article-count">12 Articles</span>
+                </div>
+                
+                <div class="category-card fade-in">
+                    <div class="category-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Digital Strategy</h3>
+                    <p>Overall digital marketing strategy and planning</p>
+                    <span class="article-count">14 Articles</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DigitalPro</h3>
+                    <p>We're a full-service digital marketing agency helping businesses grow their online presence through strategic SEO, compelling content, and data-driven marketing campaigns.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><img class="social-icon" src="https://logo.clearbit.com/facebook.com?size=28" alt="Facebook" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="Twitter/X"><img class="social-icon" src="https://logo.clearbit.com/x.com?size=28" alt="X" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="LinkedIn"><img class="social-icon" src="https://logo.clearbit.com/linkedin.com?size=28" alt="LinkedIn" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="Instagram"><img class="social-icon" src="https://logo.clearbit.com/instagram.com?size=28" alt="Instagram" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="YouTube"><img class="social-icon" src="https://logo.clearbit.com/youtube.com?size=28" alt="YouTube" referrerpolicy="no-referrer"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#seo">SEO Optimization</a></li>
+                        <li><a href="services.html#ppc">PPC Advertising</a></li>
+                        <li><a href="services.html#social">Social Media Marketing</a></li>
+                        <li><a href="services.html#content">Content Marketing</a></li>
+                        <li><a href="services.html#email">Email Marketing</a></li>
+                        <li><a href="services.html#design">Web Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest digital marketing tips and insights.</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Enter your email" required class="form-input">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> DigitalPro. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Blog functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Blog search functionality
+            const searchInput = document.getElementById('blogSearch');
+            const blogCards = document.querySelectorAll('.blog-card');
+            
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    
+                    blogCards.forEach(card => {
+                        const title = card.querySelector('h3').textContent.toLowerCase();
+                        const content = card.querySelector('p').textContent.toLowerCase();
+                        
+                        if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            }
+
+            // Blog filtering
+            const filterBtns = document.querySelectorAll('.blog-filters .filter-btn');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    
+                    blogCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Load more functionality
+            const loadMoreBtn = document.querySelector('.load-more-btn');
+            let visibleCards = 6;
+            
+            if (loadMoreBtn) {
+                // Initially hide cards beyond the first 6
+                blogCards.forEach((card, index) => {
+                    if (index >= visibleCards) {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                loadMoreBtn.addEventListener('click', function() {
+                    visibleCards += 3;
+                    
+                    blogCards.forEach((card, index) => {
+                        if (index < visibleCards) {
+                            card.style.display = 'block';
+                        }
+                    });
+                    
+                    if (visibleCards >= blogCards.length) {
+                        loadMoreBtn.style.display = 'none';
+                    }
+                });
+            }
+
+            // Newsletter form handling
+            const blogNewsletterForm = document.getElementById('blogNewsletterForm');
+            if (blogNewsletterForm) {
+                blogNewsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    alert('Thank you for subscribing to our newsletter!');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+

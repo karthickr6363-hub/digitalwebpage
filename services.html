@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Digital Marketing & SEO Agency</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Comprehensive digital marketing services including SEO, PPC, Social Media, Content Marketing, Email Marketing, and Web Design.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="favicon.svg" alt="Digital Marketing Agency" style="width: 40px; height: 40px;">
+                <span>DigitalPro</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            </ul>
+            
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 70vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+                <div class="hero-text animate-fadeInUp">
+                    <h1>Our Digital Marketing Services</h1>
+                    <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">Comprehensive digital marketing solutions designed to boost your online presence, drive traffic, and increase conversions. From SEO to social media, we've got you covered.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-gradient">What We Offer</h2>
+                <p class="section-subtitle">Choose from our comprehensive range of digital marketing services</p>
+            </div>
+            
+            <div class="services-filter">
+                <button class="filter-btn active" data-filter="all">All Services</button>
+                <button class="filter-btn" data-filter="seo">SEO</button>
+                <button class="filter-btn" data-filter="ppc">PPC</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+                <button class="filter-btn" data-filter="content">Content</button>
+                <button class="filter-btn" data-filter="email">Email</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="section">
+        <div class="container">
+            <!-- SEO Services -->
+            <div class="service-category" id="seo" data-category="seo">
+                <div class="category-header">
+                    <h2>SEO Optimization</h2>
+                    <p>Improve your search engine rankings and drive organic traffic</p>
+                </div>
+                
+                <div class="grid-3">
+                    <div class="service-card fade-in" data-category="seo">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Technical SEO</h3>
+                        <p class="service-description">Comprehensive technical audit and optimization of your website's foundation for better search engine visibility.</p>
+                        <ul class="service-features">
+                            <li>Site Speed Optimization</li>
+                            <li>Mobile Responsiveness</li>
+                            <li>Core Web Vitals</li>
+                            <li>Schema Markup</li>
+                            <li>XML Sitemaps</li>
+                        </ul>
+                        <div class="service-price">Starting at $1,500/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="seo">
+                        <div class="service-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3>Keyword Research & Strategy</h3>
+                        <p class="service-description">Data-driven keyword research and strategic planning to target the right audience with the right content.</p>
+                        <ul class="service-features">
+                            <li>Competitor Analysis</li>
+                            <li>Long-tail Keywords</li>
+                            <li>Search Intent Analysis</li>
+                            <li>Content Gap Analysis</li>
+                            <li>Ranking Opportunities</li>
+                        </ul>
+                        <div class="service-price">Starting at $800/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="seo">
+                        <div class="service-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>Link Building</h3>
+                        <p class="service-description">Strategic link building campaigns to improve domain authority and search rankings through quality backlinks.</p>
+                        <ul class="service-features">
+                            <li>High-Quality Backlinks</li>
+                            <li>Guest Posting</li>
+                            <li>Broken Link Building</li>
+                            <li>Resource Page Links</li>
+                            <li>Local Citations</li>
+                        </ul>
+                        <div class="service-price">Starting at $1,200/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PPC Services -->
+            <div class="service-category" id="ppc" data-category="ppc">
+                <div class="category-header">
+                    <h2>Pay-Per-Click Advertising</h2>
+                    <p>Drive immediate traffic and conversions with targeted ad campaigns</p>
+                </div>
+                
+                <div class="grid-3">
+                    <div class="service-card fade-in" data-category="ppc">
+                        <div class="service-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h3>Google Ads Management</h3>
+                        <p class="service-description">Comprehensive Google Ads campaigns across Search, Display, and Shopping networks for maximum ROI.</p>
+                        <ul class="service-features">
+                            <li>Search Campaigns</li>
+                            <li>Display Advertising</li>
+                            <li>Shopping Campaigns</li>
+                            <li>YouTube Ads</li>
+                            <li>Remarketing</li>
+                        </ul>
+                        <div class="service-price">Starting at $2,000/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="ppc">
+                        <div class="service-icon">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <h3>Facebook & Instagram Ads</h3>
+                        <p class="service-description">Targeted social media advertising campaigns on Facebook and Instagram to reach your ideal audience.</p>
+                        <ul class="service-features">
+                            <li>Audience Targeting</li>
+                            <li>Creative Development</li>
+                            <li>Campaign Optimization</li>
+                            <li>A/B Testing</li>
+                            <li>Conversion Tracking</li>
+                        </ul>
+                        <div class="service-price">Starting at $1,500/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="ppc">
+                        <div class="service-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn Advertising</h3>
+                        <p class="service-description">B2B focused advertising campaigns on LinkedIn to reach professionals and decision-makers.</p>
+                        <ul class="service-features">
+                            <li>Sponsored Content</li>
+                            <li>Message Ads</li>
+                            <li>Dynamic Ads</li>
+                            <li>Lead Generation</li>
+                            <li>Account-Based Marketing</li>
+                        </ul>
+                        <div class="service-price">Starting at $1,800/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Services -->
+            <div class="service-category" id="social" data-category="social">
+                <div class="category-header">
+                    <h2>Social Media Marketing</h2>
+                    <p>Build your brand presence and engage with your audience</p>
+                </div>
+                
+                <div class="grid-3">
+                    <div class="service-card fade-in" data-category="social">
+                        <div class="service-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Social Media Management</h3>
+                        <p class="service-description">Complete social media management across all major platforms with engaging content and community building.</p>
+                        <ul class="service-features">
+                            <li>Content Calendar</li>
+                            <li>Post Scheduling</li>
+                            <li>Community Management</li>
+                            <li>Engagement Monitoring</li>
+                            <li>Performance Analytics</li>
+                        </ul>
+                        <div class="service-price">Starting at $1,200/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="social">
+                        <div class="service-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Social Media Content Creation</h3>
+                        <p class="service-description">Creative content production including graphics, videos, and copywriting for all social platforms.</p>
+                        <ul class="service-features">
+                            <li>Graphic Design</li>
+                            <li>Video Production</li>
+                            <li>Copywriting</li>
+                            <li>Brand Guidelines</li>
+                            <li>Content Templates</li>
+                        </ul>
+                        <div class="service-price">Starting at $800/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="social">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Social Media Analytics</h3>
+                        <p class="service-description">Comprehensive analytics and reporting to track performance and optimize your social media strategy.</p>
+                        <ul class="service-features">
+                            <li>Performance Reports</li>
+                            <li>Audience Insights</li>
+                            <li>Competitor Analysis</li>
+                            <li>ROI Tracking</li>
+                            <li>Growth Metrics</li>
+                        </ul>
+                        <div class="service-price">Starting at $600/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Marketing Services -->
+            <div class="service-category" id="content" data-category="content">
+                <div class="category-header">
+                    <h2>Content Marketing</h2>
+                    <p>Create compelling content that attracts and converts your audience</p>
+                </div>
+                
+                <div class="grid-3">
+                    <div class="service-card fade-in" data-category="content">
+                        <div class="service-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <h3>Content Strategy & Writing</h3>
+                        <p class="service-description">Strategic content planning and professional copywriting to engage your audience and drive conversions.</p>
+                        <ul class="service-features">
+                            <li>Content Strategy</li>
+                            <li>Blog Writing</li>
+                            <li>Landing Page Copy</li>
+                            <li>Email Campaigns</li>
+                            <li>Product Descriptions</li>
+                        </ul>
+                        <div class="service-price">Starting at $1,000/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="content">
+                        <div class="service-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <h3>Video Production</h3>
+                        <p class="service-description">Professional video content creation for marketing, social media, and website integration.</p>
+                        <ul class="service-features">
+                            <li>Promotional Videos</li>
+                            <li>Social Media Clips</li>
+                            <li>Explainer Videos</li>
+                            <li>Product Demos</li>
+                            <li>Testimonial Videos</li>
+                        </ul>
+                        <div class="service-price">Starting at $1,500/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="content">
+                        <div class="service-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3>Graphic Design</h3>
+                        <p class="service-description">Creative visual content including infographics, social media graphics, and marketing materials.</p>
+                        <ul class="service-features">
+                            <li>Infographics</li>
+                            <li>Social Media Graphics</li>
+                            <li>Marketing Materials</li>
+                            <li>Brand Assets</li>
+                            <li>Print Design</li>
+                        </ul>
+                        <div class="service-price">Starting at $800/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Marketing -->
+            <div class="service-category" id="email" data-category="email">
+                <div class="category-header">
+                    <h2>Email Marketing</h2>
+                    <p>Nurture leads and retain customers with automated email campaigns</p>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="service-card fade-in" data-category="email">
+                        <div class="service-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Campaign Management</h3>
+                        <p class="service-description">Complete email marketing setup and management including automation, segmentation, and performance optimization.</p>
+                        <ul class="service-features">
+                            <li>Email Automation</li>
+                            <li>List Segmentation</li>
+                            <li>A/B Testing</li>
+                            <li>Template Design</li>
+                            <li>Performance Analytics</li>
+                        </ul>
+                        <div class="service-price">Starting at $900/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="email">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>Newsletter & Broadcast</h3>
+                        <p class="service-description">Regular newsletter campaigns and broadcast emails to keep your audience engaged and informed.</p>
+                        <ul class="service-features">
+                            <li>Newsletter Design</li>
+                            <li>Content Curation</li>
+                            <li>Delivery Optimization</li>
+                            <li>Engagement Tracking</li>
+                            <li>List Growth</li>
+                        </ul>
+                        <div class="service-price">Starting at $600/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Design & Development -->
+            <div class="service-category" id="design" data-category="design">
+                <div class="category-header">
+                    <h2>Web Design & Development</h2>
+                    <p>Create stunning, responsive websites that convert visitors into customers</p>
+                </div>
+                
+                <div class="grid-3">
+                    <div class="service-card fade-in" data-category="design">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Website Design</h3>
+                        <p class="service-description">Custom website design that reflects your brand and provides an exceptional user experience.</p>
+                        <ul class="service-features">
+                            <li>UI/UX Design</li>
+                            <li>Responsive Design</li>
+                            <li>Brand Integration</li>
+                            <li>Conversion Optimization</li>
+                            <li>Mobile-First Approach</li>
+                        </ul>
+                        <div class="service-price">Starting at $2,500</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="design">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Website Development</h3>
+                        <p class="service-description">Professional website development with modern technologies and best practices for performance and SEO.</p>
+                        <ul class="service-features">
+                            <li>Custom Development</li>
+                            <li>CMS Integration</li>
+                            <li>E-commerce Solutions</li>
+                            <li>Performance Optimization</li>
+                            <li>SEO-Friendly Code</li>
+                        </ul>
+                        <div class="service-price">Starting at $3,500</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                    
+                    <div class="service-card fade-in" data-category="design">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Website Maintenance</h3>
+                        <p class="service-description">Ongoing website maintenance, updates, and optimization to keep your site running smoothly and securely.</p>
+                        <ul class="service-features">
+                            <li>Regular Updates</li>
+                            <li>Security Monitoring</li>
+                            <li>Performance Optimization</li>
+                            <li>Backup Management</li>
+                            <li>Technical Support</li>
+                        </ul>
+                        <div class="service-price">Starting at $200/month</div>
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics & Reporting -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Analytics & Reporting</h2>
+                <p class="section-subtitle">Track performance and measure ROI with comprehensive analytics</p>
+            </div>
+            
+            <div class="grid-2">
+                <div class="analytics-card card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Performance Tracking</h3>
+                    <p>Comprehensive tracking and analysis of all your digital marketing campaigns with detailed performance metrics.</p>
+                    <ul class="service-features">
+                        <li>Google Analytics Setup</li>
+                        <li>Conversion Tracking</li>
+                        <li>Custom Dashboards</li>
+                        <li>Real-time Monitoring</li>
+                    </ul>
+                </div>
+                
+                <div class="analytics-card card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Monthly Reports</h3>
+                    <p>Detailed monthly reports with insights, recommendations, and actionable strategies for continuous improvement.</p>
+                    <ul class="service-features">
+                        <li>Executive Summaries</li>
+                        <li>Performance Metrics</li>
+                        <li>ROI Analysis</li>
+                        <li>Strategic Recommendations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Process</h2>
+                <p class="section-subtitle">How we deliver exceptional results for your business</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step card fade-in">
+                    <div class="step-number">01</div>
+                    <h3>Discovery & Analysis</h3>
+                    <p>We analyze your current digital presence, competitors, and market opportunities to create a tailored strategy.</p>
+                    <div class="process-line"></div>
+                </div>
+                
+                <div class="process-step card fade-in">
+                    <div class="step-number">02</div>
+                    <h3>Strategy Development</h3>
+                    <p>Based on our analysis, we develop a comprehensive digital marketing strategy aligned with your business goals.</p>
+                    <div class="process-line"></div>
+                </div>
+                
+                <div class="process-step card fade-in">
+                    <div class="step-number">03</div>
+                    <h3>Implementation</h3>
+                    <p>Our expert team implements the strategy using cutting-edge tools and proven methodologies.</p>
+                    <div class="process-line"></div>
+                </div>
+                
+                <div class="process-step card fade-in">
+                    <div class="step-number">04</div>
+                    <h3>Monitoring & Optimization</h3>
+                    <p>We continuously monitor performance and optimize campaigns to maximize your ROI and achieve better results.</p>
+                    <div class="process-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: var(--gradient); color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Ready to Get Started?</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Let's discuss your digital marketing needs and create a custom strategy for your business</p>
+            </div>
+            
+            <div class="text-center">
+                <a href="contact.html" class="btn btn-white">
+                    <i class="fas fa-comments"></i>
+                    Get Free Consultation
+                </a>
+                <a href="pricing.html" class="btn btn-outline-white">
+                    <i class="fas fa-dollar-sign"></i>
+                    View Pricing Plans
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose DigitalPro?</h2>
+                <p class="section-subtitle">Our proven track record speaks for itself</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Projects Completed</div>
+                    <p>Successfully delivered digital marketing campaigns across various industries</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                    <p>Our clients consistently rate us highly for our results and service quality</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">250%</div>
+                    <div class="stat-label">Average ROI</div>
+                    <p>Our clients see significant returns on their digital marketing investments</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                    <p>Round-the-clock support to ensure your campaigns run smoothly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Process</h2>
+                <p class="section-subtitle">How we deliver exceptional results for your business</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Discovery & Analysis</h3>
+                    <p>We analyze your current digital presence, competitors, and market opportunities to create a tailored strategy.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Strategy Development</h3>
+                    <p>Based on our analysis, we develop a comprehensive digital marketing strategy aligned with your business goals.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Implementation</h3>
+                    <p>Our expert team implements the strategy using cutting-edge tools and proven methodologies.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3>Monitoring & Optimization</h3>
+                    <p>We continuously monitor performance and optimize campaigns to maximize your ROI and achieve better results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Grow Your Business?</h2>
+                <p>Join hundreds of successful businesses that trust DigitalPro for their digital marketing needs.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-white">
+                        <i class="fas fa-rocket"></i>
+                        Start Your Project
+                    </a>
+                    <a href="portfolio.html" class="btn btn-outline-white">
+                        <i class="fas fa-eye"></i>
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DigitalPro</h3>
+                    <p>We're a full-service digital marketing agency helping businesses grow their online presence through strategic SEO, compelling content, and data-driven marketing campaigns.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><img class="social-icon" src="https://logo.clearbit.com/facebook.com?size=28" alt="Facebook" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="Twitter/X"><img class="social-icon" src="https://logo.clearbit.com/x.com?size=28" alt="X" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="LinkedIn"><img class="social-icon" src="https://logo.clearbit.com/linkedin.com?size=28" alt="LinkedIn" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="Instagram"><img class="social-icon" src="https://logo.clearbit.com/instagram.com?size=28" alt="Instagram" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="YouTube"><img class="social-icon" src="https://logo.clearbit.com/youtube.com?size=28" alt="YouTube" referrerpolicy="no-referrer"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#seo">SEO Optimization</a></li>
+                        <li><a href="#ppc">PPC Advertising</a></li>
+                        <li><a href="#social">Social Media Marketing</a></li>
+                        <li><a href="#content">Content Marketing</a></li>
+                        <li><a href="#email">Email Marketing</a></li>
+                        <li><a href="#design">Web Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest digital marketing tips and insights.</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Enter your email" required class="form-input">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> DigitalPro. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Service filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const serviceCategories = document.querySelectorAll('.service-category');
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    
+                    // Filter service categories (entire sections)
+                    serviceCategories.forEach(category => {
+                        if (filter === 'all' || category.dataset.category === filter) {
+                            category.style.display = 'block';
+                            setTimeout(() => {
+                                category.style.opacity = '1';
+                            }, 10);
+                        } else {
+                            category.style.opacity = '0';
+                            setTimeout(() => {
+                                category.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                    
+                    // Filter individual service cards within visible categories
+                    serviceCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

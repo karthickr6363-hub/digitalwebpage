@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Digital Marketing Client Portal</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Access your digital marketing dashboard to track campaign performance, view analytics, and manage your account.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="favicon.svg" alt="Digital Marketing Agency" style="width: 40px; height: 40px;">
+                <span>DigitalPro</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="user-menu" style="display: none;">
+                    <div class="user-dropdown">
+                        <button class="user-btn">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&q=80" alt="User" class="user-avatar">
+                            <span class="user-name">John Doe</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+            
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard">
+        <!-- Dashboard Header -->
+        <section class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-welcome">
+                    <h1>Welcome back, <span id="userName">John</span>!</h1>
+                    <p>Here's an overview of your digital marketing performance</p>
+                </div>
+                
+                <div class="dashboard-nav">
+                    <a href="#overview" class="nav-link active" data-section="overview">Overview</a>
+                    <a href="#campaigns" class="nav-link" data-section="campaigns">Campaigns</a>
+                    <a href="#analytics" class="nav-link" data-section="analytics">Analytics</a>
+                    <a href="#reports" class="nav-link" data-section="reports">Reports</a>
+                    <a href="#settings" class="nav-link" data-section="settings">Settings</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="dashboard-section active">
+            <div class="container">
+                <!-- Key Metrics -->
+                <div class="metrics-grid">
+                    <div class="metric-card fade-in">
+                        <div class="metric-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 data-metric="totalTraffic">45,230</h3>
+                            <p>Total Website Traffic</p>
+                            <span class="metric-change positive">+12.5%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card fade-in">
+                        <div class="metric-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 data-metric="organicTraffic">28,450</h3>
+                            <p>Organic Traffic</p>
+                            <span class="metric-change positive">+18.3%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card fade-in">
+                        <div class="metric-icon">
+                            <i class="fas fa-ad"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 data-metric="paidTraffic">16,780</h3>
+                            <p>Paid Traffic</p>
+                            <span class="metric-change positive">+8.7%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card fade-in">
+                        <div class="metric-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 data-metric="conversionRate">3.2%</h3>
+                            <p>Conversion Rate</p>
+                            <span class="metric-change positive">+2.1%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-grid">
+                    <div class="chart-card fade-in">
+                        <div class="chart-header">
+                            <h3>Traffic Overview</h3>
+                            <div class="chart-controls">
+                                <button class="chart-btn active" data-period="7">7D</button>
+                                <button class="chart-btn" data-period="30">30D</button>
+                                <button class="chart-btn" data-period="90">90D</button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="trafficChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-card fade-in">
+                        <div class="chart-header">
+                            <h3>Traffic Sources</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="sourcesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="activity-section">
+                    <div class="activity-card fade-in">
+                        <div class="card-header">
+                            <h3>Recent Activity</h3>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>SEO Report Generated</h4>
+                                    <p>Monthly SEO performance report is ready for review</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-ad"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>PPC Campaign Updated</h4>
+                                    <p>Google Ads campaign "Summer Sale" budget increased</p>
+                                    <span class="activity-time">5 hours ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Social Media Post Published</h4>
+                                    <p>New Instagram post published on your business account</p>
+                                    <span class="activity-time">1 day ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Email Campaign Sent</h4>
+                                    <p>Newsletter sent to 2,450 subscribers</p>
+                                    <span class="activity-time">2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campaigns Section -->
+        <section id="campaigns" class="dashboard-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Active Campaigns</h2>
+                    <button class="btn btn-primary">Create New Campaign</button>
+                </div>
+                
+                <div class="campaigns-grid">
+                    <div class="campaign-card fade-in">
+                        <div class="campaign-header">
+                            <h3>SEO Campaign</h3>
+                            <span class="campaign-status active">Active</span>
+                        </div>
+                        <div class="campaign-metrics">
+                            <div class="metric">
+                                <span class="metric-value">156</span>
+                                <span class="metric-label">Keywords Ranked</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">28,450</span>
+                                <span class="metric-label">Organic Traffic</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">$2,450</span>
+                                <span class="metric-label">Monthly Cost</span>
+                            </div>
+                        </div>
+                        <div class="campaign-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-text">75% of monthly goals achieved</span>
+                        </div>
+                    </div>
+                    
+                    <div class="campaign-card fade-in">
+                        <div class="campaign-header">
+                            <h3>Google Ads Campaign</h3>
+                            <span class="campaign-status active">Active</span>
+                        </div>
+                        <div class="campaign-metrics">
+                            <div class="metric">
+                                <span class="metric-value">45</span>
+                                <span class="metric-label">Active Ads</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">16,780</span>
+                                <span class="metric-label">Clicks</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">$3,200</span>
+                                <span class="metric-label">Monthly Spend</span>
+                            </div>
+                        </div>
+                        <div class="campaign-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <span class="progress-text">60% of monthly goals achieved</span>
+                        </div>
+                    </div>
+                    
+                    <div class="campaign-card fade-in">
+                        <div class="campaign-header">
+                            <h3>Social Media Campaign</h3>
+                            <span class="campaign-status active">Active</span>
+                        </div>
+                        <div class="campaign-metrics">
+                            <div class="metric">
+                                <span class="metric-value">12,450</span>
+                                <span class="metric-label">Impressions</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">1,890</span>
+                                <span class="metric-label">Engagements</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">$800</span>
+                                <span class="metric-label">Monthly Spend</span>
+                            </div>
+                        </div>
+                        <div class="campaign-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                            <span class="progress-text">90% of monthly goals achieved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analytics" class="dashboard-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Detailed Analytics</h2>
+                    <div class="analytics-controls">
+                        <select class="form-select">
+                            <option>Last 30 days</option>
+                            <option>Last 7 days</option>
+                            <option>Last 90 days</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="analytics-grid">
+                    <div class="analytics-card fade-in">
+                        <h3>Top Performing Keywords</h3>
+                        <div class="keywords-list">
+                            <div class="keyword-item">
+                                <span class="keyword">digital marketing services</span>
+                                <span class="position">#3</span>
+                                <span class="traffic">2,450</span>
+                            </div>
+                            <div class="keyword-item">
+                                <span class="keyword">seo agency</span>
+                                <span class="position">#5</span>
+                                <span class="traffic">1,890</span>
+                            </div>
+                            <div class="keyword-item">
+                                <span class="keyword">ppc management</span>
+                                <span class="position">#2</span>
+                                <span class="traffic">1,650</span>
+                            </div>
+                            <div class="keyword-item">
+                                <span class="keyword">social media marketing</span>
+                                <span class="position">#4</span>
+                                <span class="traffic">1,420</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card fade-in">
+                        <h3>Conversion Funnel</h3>
+                        <div class="funnel-chart">
+                            <canvas id="funnelChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card fade-in">
+                        <h3>Device Breakdown</h3>
+                        <div class="device-stats">
+                            <div class="device-item">
+                                <div class="device-icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div class="device-info">
+                                    <span class="device-name">Desktop</span>
+                                    <span class="device-percentage">45%</span>
+                                </div>
+                                <div class="device-bar">
+                                    <div class="device-fill" style="width: 45%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="device-item">
+                                <div class="device-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="device-info">
+                                    <span class="device-name">Mobile</span>
+                                    <span class="device-percentage">35%</span>
+                                </div>
+                                <div class="device-bar">
+                                    <div class="device-fill" style="width: 35%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="device-item">
+                                <div class="device-icon">
+                                    <i class="fas fa-tablet-alt"></i>
+                                </div>
+                                <div class="device-info">
+                                    <span class="device-name">Tablet</span>
+                                    <span class="device-percentage">20%</span>
+                                </div>
+                                <div class="device-bar">
+                                    <div class="device-fill" style="width: 20%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports" class="dashboard-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Reports & Documents</h2>
+                    <button class="btn btn-secondary">Generate New Report</button>
+                </div>
+                
+                <div class="reports-grid">
+                    <div class="report-card fade-in">
+                        <div class="report-header">
+                            <div class="report-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="report-info">
+                                <h3>Monthly SEO Report</h3>
+                                <p>March 2024</p>
+                            </div>
+                            <div class="report-actions">
+                                <button class="btn-icon" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn-icon" title="View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="report-summary">
+                            <div class="summary-item">
+                                <span class="summary-label">Traffic Growth</span>
+                                <span class="summary-value positive">+18.3%</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Keywords Ranked</span>
+                                <span class="summary-value">156</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="report-card fade-in">
+                        <div class="report-header">
+                            <div class="report-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="report-info">
+                                <h3>PPC Performance Report</h3>
+                                <p>March 2024</p>
+                            </div>
+                            <div class="report-actions">
+                                <button class="btn-icon" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn-icon" title="View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="report-summary">
+                            <div class="summary-item">
+                                <span class="summary-label">ROAS</span>
+                                <span class="summary-value positive">4.2x</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">Cost per Click</span>
+                                <span class="summary-value">$1.45</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="report-card fade-in">
+                        <div class="report-header">
+                            <div class="report-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div class="report-info">
+                                <h3>Social Media Report</h3>
+                                <p>March 2024</p>
+                            </div>
+                            <div class="report-actions">
+                                <button class="btn-icon" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn-icon" title="View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="report-summary">
+                            <div class="summary-item">
+                                <span class="summary-label">Engagement Rate</span>
+                                <span class="summary-value positive">8.5%</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">New Followers</span>
+                                <span class="summary-value">+450</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="dashboard-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Account Settings</h2>
+                </div>
+                
+                <div class="settings-grid">
+                    <div class="settings-card fade-in">
+                        <h3>Profile Information</h3>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" value="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" value="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-input" value="TechStart Inc.">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Website</label>
+                                <input type="url" class="form-input" value="https://techstart.com">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                        </form>
+                    </div>
+                    
+                    <div class="settings-card fade-in">
+                        <h3>Notification Preferences</h3>
+                        <form class="settings-form">
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    Email notifications
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    Weekly reports
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Campaign alerts
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    Monthly summaries
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Preferences</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DigitalPro</h3>
+                    <p>We're a full-service digital marketing agency helping businesses grow their online presence through strategic SEO, compelling content, and data-driven marketing campaigns.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#seo">SEO Optimization</a></li>
+                        <li><a href="services.html#ppc">PPC Advertising</a></li>
+                        <li><a href="services.html#social">Social Media Marketing</a></li>
+                        <li><a href="services.html#content">Content Marketing</a></li>
+                        <li><a href="services.html#email">Email Marketing</a></li>
+                        <li><a href="services.html#design">Web Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest digital marketing tips and insights.</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Enter your email" required class="form-input">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> DigitalPro. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Dashboard functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if user is logged in
+            const currentUser = localStorage.getItem('currentUser');
+            if (!currentUser) {
+                window.location.href = 'login.html';
+                return;
+            }
+            
+            const user = JSON.parse(currentUser);
+            document.getElementById('userName').textContent = user.name;
+            
+            // Update auth UI
+            updateAuthUI();
+            
+            // Dashboard navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.dashboard-section');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetSection = this.dataset.section;
+                    
+                    // Update active nav link
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show target section
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === targetSection) {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+            
+            // Chart period controls
+            const chartBtns = document.querySelectorAll('.chart-btn');
+            chartBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    chartBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Update chart data based on period
+                    updateTrafficChart(this.dataset.period);
+                });
+            });
+            
+            // Initialize charts
+            initCharts();
+        });
+        
+        function updateAuthUI() {
+            const currentUser = localStorage.getItem('currentUser');
+            if (currentUser) {
+                const user = JSON.parse(currentUser);
+                const loginBtn = document.querySelector('.login-btn');
+                const userMenu = document.querySelector('.user-menu');
+                
+                if (loginBtn) loginBtn.style.display = 'none';
+                if (userMenu) {
+                    userMenu.style.display = 'block';
+                    userMenu.querySelector('.user-name').textContent = user.name;
+                }
+            }
+        }
+        
+        function logout() {
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        }
+        
+        function initCharts() {
+            // Traffic Chart
+            const trafficCtx = document.getElementById('trafficChart').getContext('2d');
+            new Chart(trafficCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Organic Traffic',
+                        data: [12000, 19000, 15000, 25000, 22000, 28450],
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                        tension: 0.4
+                    }, {
+                        label: 'Paid Traffic',
+                        data: [8000, 12000, 10000, 15000, 14000, 16780],
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            
+            // Sources Chart
+            const sourcesCtx = document.getElementById('sourcesChart').getContext('2d');
+            new Chart(sourcesCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Organic Search', 'Paid Search', 'Social Media', 'Direct', 'Referral'],
+                    datasets: [{
+                        data: [45, 25, 15, 10, 5],
+                        backgroundColor: [
+                            '#2563eb',
+                            '#10b981',
+                            '#f59e0b',
+                            '#ef4444',
+                            '#8b5cf6'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+            
+            // Funnel Chart
+            const funnelCtx = document.getElementById('funnelChart').getContext('2d');
+            new Chart(funnelCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Visitors', 'Leads', 'MQLs', 'SQLs', 'Customers'],
+                    datasets: [{
+                        data: [45230, 13569, 6784, 3392, 1357],
+                        backgroundColor: '#2563eb'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+        
+        function updateTrafficChart(period) {
+            // In a real application, this would fetch new data from an API
+            console.log('Updating chart for period:', period);
+        }
+    </script>
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
+
+

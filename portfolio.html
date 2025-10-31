@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & Case Studies - Digital Marketing Success Stories</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Explore our portfolio of successful digital marketing campaigns and case studies showcasing real results for our clients.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="favicon.svg" alt="Digital Marketing Agency" style="width: 40px; height: 40px;">
+                <span>DigitalPro</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            </ul>
+            
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+                <div class="hero-text animate-fadeInUp">
+                    <h1>Our Success Stories</h1>
+                    <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">Real results from real clients. Explore our portfolio of successful digital marketing campaigns and see how we've helped businesses achieve their goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="section">
+        <div class="container">
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="seo">SEO</button>
+                <button class="filter-btn" data-filter="ppc">PPC</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+                <button class="filter-btn" data-filter="content">Content</button>
+                <button class="filter-btn" data-filter="design">Web Design</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Grid -->
+    <section class="section">
+        <div class="container">
+            <!-- Case Study 1: E-commerce SEO -->
+            <div class="case-study fade-in" data-category="seo">
+                <div class="case-study-content">
+                    <div class="case-study-info">
+                        <div class="case-study-header">
+                            <h2>E-commerce SEO Success Story</h2>
+                            <span class="case-study-category">SEO Optimization</span>
+                        </div>
+                        <div class="case-study-overview">
+                            <h3>Challenge</h3>
+                            <p>A mid-size e-commerce retailer was struggling with low organic visibility and poor search rankings. Their website was receiving minimal organic traffic, resulting in low sales and poor ROI on their digital marketing efforts.</p>
+                            
+                            <h3>Solution</h3>
+                            <p>We implemented a comprehensive SEO strategy including technical optimization, keyword research, content creation, and link building. Our approach focused on improving site speed, mobile responsiveness, and creating high-quality, keyword-optimized content.</p>
+                            
+                            <h3>Results</h3>
+                            <div class="results-grid">
+                                <div class="result-item">
+                                    <span class="result-number">400%</span>
+                                    <span class="result-label">Increase in Organic Traffic</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">250%</span>
+                                    <span class="result-label">Revenue Growth</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">85%</span>
+                                    <span class="result-label">First Page Rankings</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">60%</span>
+                                    <span class="result-label">Reduction in Bounce Rate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study-visual">
+                        <div class="chart-container">
+                            <canvas id="ecommerceChart"></canvas>
+                        </div>
+                        <div class="before-after">
+                            <div class="before">
+                                <h4>Before</h4>
+                                <ul>
+                                    <li>2,500 monthly organic visitors</li>
+                                    <li>15 first-page rankings</li>
+                                    <li>65% bounce rate</li>
+                                    <li>$25,000 monthly revenue</li>
+                                </ul>
+                            </div>
+                            <div class="after">
+                                <h4>After (6 months)</h4>
+                                <ul>
+                                    <li>12,500 monthly organic visitors</li>
+                                    <li>85 first-page rankings</li>
+                                    <li>26% bounce rate</li>
+                                    <li>$87,500 monthly revenue</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2: B2B PPC Campaign -->
+            <div class="case-study fade-in" data-category="ppc">
+                <div class="case-study-content">
+                    <div class="case-study-visual">
+                        <div class="chart-container">
+                            <canvas id="b2bChart"></canvas>
+                        </div>
+                        <div class="before-after">
+                            <div class="before">
+                                <h4>Before</h4>
+                                <ul>
+                                    <li>$150 cost per lead</li>
+                                    <li>20 qualified leads/month</li>
+                                    <li>3% conversion rate</li>
+                                    <li>$3,000 monthly ad spend</li>
+                                </ul>
+                            </div>
+                            <div class="after">
+                                <h4>After (4 months)</h4>
+                                <ul>
+                                    <li>$45 cost per lead</li>
+                                    <li>120 qualified leads/month</li>
+                                    <li>12% conversion rate</li>
+                                    <li>$5,400 monthly ad spend</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <br> <hr> <br>
+                    
+                    <div class="case-study-info">
+                        <div class="case-study-header">
+                            <h2>B2B Software PPC Optimization</h2>
+                            <span class="case-study-category">Pay-Per-Click</span>
+                        </div>
+                        <div class="case-study-overview">
+                            <h3>Challenge</h3>
+                            <p>A B2B software company was experiencing high cost per acquisition and low lead quality from their Google Ads campaigns. They needed to improve lead quality while reducing acquisition costs.</p>
+                            
+                            <h3>Solution</h3>
+                            <p>We restructured their campaign architecture, implemented advanced audience targeting, created industry-specific ad copy, and optimized landing pages for better conversion rates.</p>
+                            
+                            <h3>Results</h3>
+                            <div class="results-grid">
+                                <div class="result-item">
+                                    <span class="result-number">70%</span>
+                                    <span class="result-label">Reduction in Cost Per Lead</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">500%</span>
+                                    <span class="result-label">Increase in Qualified Leads</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">300%</span>
+                                    <span class="result-label">Improvement in Conversion Rate</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">180%</span>
+                                    <span class="result-label">ROI Improvement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 3: Social Media Campaign -->
+            <div class="case-study fade-in" data-category="social">
+                <div class="case-study-content">
+                    <div class="case-study-info">
+                        <div class="case-study-header">
+                            <h2>Restaurant Chain Social Media Growth</h2>
+                            <span class="case-study-category">Social Media Marketing</span>
+                        </div>
+                        <div class="case-study-overview">
+                            <h3>Challenge</h3>
+                            <p>A regional restaurant chain wanted to increase brand awareness and drive foot traffic through social media. They had minimal social presence and low engagement rates.</p>
+                            
+                            <h3>Solution</h3>
+                            <p>We developed a comprehensive social media strategy including content creation, community management, influencer partnerships, and targeted advertising campaigns across Facebook and Instagram.</p>
+                            
+                            <h3>Results</h3>
+                            <div class="results-grid">
+                                <div class="result-item">
+                                    <span class="result-number">1,200%</span>
+                                    <span class="result-label">Follower Growth</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">850%</span>
+                                    <span class="result-label">Engagement Rate Increase</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">45%</span>
+                                    <span class="result-label">Increase in Foot Traffic</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">200%</span>
+                                    <span class="result-label">Social Media Revenue</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study-visual">
+                        <div class="chart-container">
+                            <canvas id="socialChart"></canvas>
+                        </div>
+                        <div class="before-after">
+                            <div class="before">
+                                <h4>Before</h4>
+                                <ul>
+                                    <li>2,500 total followers</li>
+                                    <li>1.2% engagement rate</li>
+                                    <li>50 posts per month</li>
+                                    <li>$500 monthly revenue</li>
+                                </ul>
+                            </div>
+                            <div class="after">
+                                <h4>After (8 months)</h4>
+                                <ul>
+                                    <li>32,500 total followers</li>
+                                    <li>11.4% engagement rate</li>
+                                    <li>120 posts per month</li>
+                                    <li>$1,500 monthly revenue</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 4: Content Marketing -->
+            <div class="case-study fade-in" data-category="content">
+                <div class="case-study-content">
+                    <div class="case-study-visual">
+                        <div class="chart-container">
+                            <canvas id="contentChart"></canvas>
+                        </div>
+                        <div class="before-after">
+                            <div class="before">
+                                <h4>Before</h4>
+                                <ul>
+                                    <li>500 blog visitors/month</li>
+                                    <li>2 blog posts/month</li>
+                                    <li>5% conversion rate</li>
+                                    <li>No lead generation</li>
+                                </ul>
+                            </div>
+                            <div class="after">
+                                <h4>After (10 months)</h4>
+                                <ul>
+                                    <li>8,500 blog visitors/month</li>
+                                    <li>12 blog posts/month</li>
+                                    <li>18% conversion rate</li>
+                                    <li>150 leads/month</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <br> <hr> <br>
+                    
+                    <div class="case-study-info">
+                        <div class="case-study-header">
+                            <h2>Tech Startup Content Marketing</h2>
+                            <span class="case-study-category">Content Marketing</span>
+                        </div>
+                        <div class="case-study-overview">
+                            <h3>Challenge</h3>
+                            <p>A B2B tech startup needed to establish thought leadership and generate qualified leads through content marketing. They had limited content and no clear strategy.</p>
+                            
+                            <h3>Solution</h3>
+                            <p>We developed a comprehensive content strategy including SEO-optimized blog posts, whitepapers, case studies, and video content. We also implemented lead magnets and email nurturing sequences.</p>
+                            
+                            <h3>Results</h3>
+                            <div class="results-grid">
+                                <div class="result-item">
+                                    <span class="result-number">1,600%</span>
+                                    <span class="result-label">Blog Traffic Growth</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">300%</span>
+                                    <span class="result-label">Conversion Rate Improvement</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">150</span>
+                                    <span class="result-label">Monthly Qualified Leads</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">40%</span>
+                                    <span class="result-label">Lead-to-Customer Rate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 5: Web Design & Development -->
+            <div class="case-study fade-in" data-category="design">
+                <div class="case-study-content">
+                    <div class="case-study-info">
+                        <div class="case-study-header">
+                            <h2>Healthcare Website Redesign</h2>
+                            <span class="case-study-category">Web Design & Development</span>
+                        </div>
+                        <div class="case-study-overview">
+                            <h3>Challenge</h3>
+                            <p>A healthcare practice needed a complete website redesign to improve patient experience, increase appointment bookings, and enhance their online presence.</p>
+                            
+                            <h3>Solution</h3>
+                            <p>We created a modern, responsive website with patient-focused design, online appointment booking system, patient portal integration, and SEO optimization.</p>
+                            
+                            <h3>Results</h3>
+                            <div class="results-grid">
+                                <div class="result-item">
+                                    <span class="result-number">300%</span>
+                                    <span class="result-label">Increase in Online Bookings</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">85%</span>
+                                    <span class="result-label">Improvement in Page Speed</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">150%</span>
+                                    <span class="result-label">Mobile Traffic Growth</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-number">90%</span>
+                                    <span class="result-label">User Satisfaction Score</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-study-visual">
+                        <div class="chart-container">
+                            <canvas id="webDesignChart"></canvas>
+                        </div>
+                        <div class="before-after">
+                            <div class="before">
+                                <h4>Before</h4>
+                                <ul>
+                                    <li>15 online bookings/month</li>
+                                    <li>8-second load time</li>
+                                    <li>30% mobile traffic</li>
+                                    <li>60% user satisfaction</li>
+                                </ul>
+                            </div>
+                            <div class="after">
+                                <h4>After (6 months)</h4>
+                                <ul>
+                                    <li>60 online bookings/month</li>
+                                    <li>1.2-second load time</li>
+                                    <li>75% mobile traffic</li>
+                                    <li>95% user satisfaction</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Industries -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Industries We Serve</h2>
+                <p class="section-subtitle">We have experience working with clients across various industries</p>
+            </div>
+            
+            <div class="industries-grid">
+                <div class="industry-card card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce</h3>
+                    <p>Online retailers, marketplaces, and direct-to-consumer brands</p>
+                </div>
+                
+                <div class="industry-card card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Technology</h3>
+                    <p>SaaS companies, software developers, and tech startups</p>
+                </div>
+                
+                <div class="industry-card card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>Medical practices, clinics, and healthcare providers</p>
+                </div>
+                
+                <div class="industry-card card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p>Universities, online courses, and educational institutions</p>
+                </div>
+                
+                <div class="industry-card card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Real Estate</h3>
+                    <p>Real estate agencies, property developers, and brokers</p>
+                </div>
+                
+                <div class="industry-card card fade-in">
+                    <div class="industry-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Food & Beverage</h3>
+                    <p>Restaurants, cafes, food delivery, and beverage companies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: var(--gradient); color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Ready to Create Your Success Story?</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Let's discuss your goals and create a custom strategy to achieve similar results</p>
+            </div>
+            
+            <div class="text-center">
+                <a href="contact.html" class="btn btn-white">
+                    <i class="fas fa-rocket"></i>
+                    Start Your Project
+                </a>
+                <a href="services.html" class="btn btn-outline-white">
+                    <i class="fas fa-cogs"></i>
+                    Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DigitalPro</h3>
+                    <p>We're a full-service digital marketing agency helping businesses grow their online presence through strategic SEO, compelling content, and data-driven marketing campaigns.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><img class="social-icon" src="https://logo.clearbit.com/facebook.com?size=28" alt="Facebook" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="Twitter/X"><img class="social-icon" src="https://logo.clearbit.com/x.com?size=28" alt="X" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="LinkedIn"><img class="social-icon" src="https://logo.clearbit.com/linkedin.com?size=28" alt="LinkedIn" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="Instagram"><img class="social-icon" src="https://logo.clearbit.com/instagram.com?size=28" alt="Instagram" referrerpolicy="no-referrer"></a>
+                        <a href="#" title="YouTube"><img class="social-icon" src="https://logo.clearbit.com/youtube.com?size=28" alt="YouTube" referrerpolicy="no-referrer"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#seo">SEO Optimization</a></li>
+                        <li><a href="services.html#ppc">PPC Advertising</a></li>
+                        <li><a href="services.html#social">Social Media Marketing</a></li>
+                        <li><a href="services.html#content">Content Marketing</a></li>
+                        <li><a href="services.html#email">Email Marketing</a></li>
+                        <li><a href="services.html#design">Web Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest digital marketing tips and insights.</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Enter your email" required class="form-input">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> DigitalPro. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Portfolio filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const caseStudies = document.querySelectorAll('.case-study');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    
+                    caseStudies.forEach(study => {
+                        if (filter === 'all' || study.dataset.category === filter) {
+                            study.style.display = 'block';
+                        } else {
+                            study.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        // Chart.js configurations
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        // E-commerce Chart
+        const ecommerceCtx = document.getElementById('ecommerceChart').getContext('2d');
+        new Chart(ecommerceCtx, {
+            type: 'line',
+            data: {
+                labels: ['Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 5', 'Month 6'],
+                datasets: [{
+                    label: 'Organic Traffic',
+                    data: [2500, 3800, 5200, 6800, 9200, 12500],
+                    borderColor: '#2563eb',
+                    backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                    tension: 0.4
+                }, {
+                    label: 'Revenue',
+                    data: [25000, 35000, 48000, 62000, 75000, 87500],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.4
+                }]
+            },
+            options: chartOptions
+        });
+
+        // B2B Chart
+        const b2bCtx = document.getElementById('b2bChart').getContext('2d');
+        new Chart(b2bCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Month 1', 'Month 2', 'Month 3', 'Month 4'],
+                datasets: [{
+                    label: 'Cost Per Lead',
+                    data: [150, 120, 85, 45],
+                    backgroundColor: '#ef4444'
+                }, {
+                    label: 'Leads Generated',
+                    data: [20, 45, 80, 120],
+                    backgroundColor: '#10b981'
+                }]
+            },
+            options: chartOptions
+        });
+
+        // Social Media Chart
+        const socialCtx = document.getElementById('socialChart').getContext('2d');
+        new Chart(socialCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Instagram', 'Facebook', 'Twitter'],
+                datasets: [{
+                    data: [45, 35, 20],
+                    backgroundColor: ['#e1306c', '#1877f2', '#1da1f2']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Content Marketing Chart
+        const contentCtx = document.getElementById('contentChart').getContext('2d');
+        new Chart(contentCtx, {
+            type: 'line',
+            data: {
+                labels: ['Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 5', 'Month 6', 'Month 7', 'Month 8', 'Month 9', 'Month 10'],
+                datasets: [{
+                    label: 'Blog Visitors',
+                    data: [500, 800, 1200, 1800, 2500, 3200, 4200, 5200, 6500, 8500],
+                    borderColor: '#8b5cf6',
+                    backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                    tension: 0.4
+                }]
+            },
+            options: chartOptions
+        });
+
+        // Web Design Chart
+        const webDesignCtx = document.getElementById('webDesignChart').getContext('2d');
+        new Chart(webDesignCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Load Time', 'Mobile Traffic', 'Bookings', 'Satisfaction'],
+                datasets: [{
+                    label: 'Before',
+                    data: [8, 30, 15, 60],
+                    backgroundColor: '#6b7280'
+                }, {
+                    label: 'After',
+                    data: [1.2, 75, 60, 95],
+                    backgroundColor: '#10b981'
+                }]
+            },
+            options: chartOptions
+        });
+    </script>
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

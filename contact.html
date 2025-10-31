@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Get Your Free Digital Marketing Consultation</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Get in touch with our digital marketing experts for a free consultation. Contact us to discuss your SEO, PPC, and marketing needs.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <img src="favicon.svg" alt="Digital Marketing Agency" style="width: 40px; height: 40px;">
+                <span>DigitalPro</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+            </ul>
+            
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+      </nav>
+  </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center;">
+                <div class="hero-text animate-fadeInUp">
+                    <h1>Get In Touch</h1>
+                    <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">Ready to grow your business? Let's discuss your digital marketing goals and create a custom strategy that delivers results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Choose how you'd like to reach out to us</p>
+            </div>
+            <div class="contact-options">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Free Consultation</h3>
+                    <p>Get a free 30-minute consultation with our digital marketing experts</p>
+                    <a href="#contact-form" class="btn btn-primary">Schedule Now</a>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Free SEO Audit</h3>
+                    <p>Get a comprehensive analysis of your website's SEO performance</p>
+                    <a href="#seo-audit" class="btn btn-primary">Get Audit</a>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us Directly</h3>
+                    <p>Speak with our team immediately for urgent inquiries</p>
+                    <a href="tel:+1234567890" class="btn btn-primary">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="container">
+      <div class="contact-grid"> 
+        <!-- Contact Form -->
+                <div class="contact-form-container fade-in">
+                    <div class="form-header"> <center></center>
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company" class="form-label">Company Name</label>
+                                <input type="text" id="company" name="company" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="website" class="form-label">Website URL</label>
+                                <input type="url" id="website" name="website" class="form-input" placeholder="https://">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="services" class="form-label">Services Interested In</label>
+                            <select id="services" name="services" class="form-input form-select">
+                                <option value="">Select a service</option>
+                                <option value="seo">SEO Optimization</option>
+                                <option value="ppc">PPC Advertising</option>
+                                <option value="social">Social Media Marketing</option>
+                                <option value="content">Content Marketing</option>
+                                <option value="email">Email Marketing</option>
+                                <option value="web-design">Web Design & Development</option>
+                                <option value="full-service">Full Service Package</option>
+                                <option value="consultation">Free Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget" class="form-label">Monthly Budget</label>
+                            <select id="budget" name="budget" class="form-input form-select">
+                                <option value="">Select budget range</option>
+                                <option value="under-1000">Under $1,000</option>
+                                <option value="1000-2500">$1,000 - $2,500</option>
+                                <option value="2500-5000">$2,500 - $5,000</option>
+                                <option value="5000-10000">$5,000 - $10,000</option>
+                                <option value="over-10000">Over $10,000</option>
+                                <option value="discuss">Let's Discuss</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Tell us about your project, goals, and how we can help..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" value="yes">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for digital marketing tips and updates
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info-container fade-in">
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+                        <p>We're here to help you succeed. Reach out to us through any of the channels below.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h4>Office Address</h4>
+                                    <p>123 Digital Marketing Ave<br>Suite 100<br>San Francisco, CA 94105</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+                                    <span class="contact-note">Mon-Fri 9AM-6PM PST</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:hello@digitalpro.com">hello@digitalpro.com</a></p>
+                                    <span class="contact-note">We respond within 24 hours</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h4>Business Hours</h4>
+                                    <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-contact">
+                            <h4>Follow Us</h4>
+                            <div class="social-links">
+                                <a href="#" title="Facebook"><img class="social-icon" src="https://logo.clearbit.com/facebook.com?size=28" alt="Facebook" referrerpolicy="no-referrer"></a>
+                                <a href="#" title="Twitter/X"><img class="social-icon" src="https://logo.clearbit.com/x.com?size=28" alt="X" referrerpolicy="no-referrer"></a>
+                                <a href="#" title="LinkedIn"><img class="social-icon" src="https://logo.clearbit.com/linkedin.com?size=28" alt="LinkedIn" referrerpolicy="no-referrer"></a>
+                                <a href="#" title="Instagram"><img class="social-icon" src="https://logo.clearbit.com/instagram.com?size=28" alt="Instagram" referrerpolicy="no-referrer"></a>
+                                <a href="#" title="YouTube"><img class="social-icon" src="https://logo.clearbit.com/youtube.com?size=28" alt="YouTube" referrerpolicy="no-referrer"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Audit Section -->
+    <section class="section" id="seo-audit">
+        <div class="container">
+            <div class="seo-audit-container">
+                <div class="seo-audit-content fade-in">
+                    <h2>Get Your Free SEO Audit</h2>
+                    <p>Discover what's holding back your website's performance with our comprehensive SEO audit. Get actionable insights and recommendations to improve your search rankings.</p>
+                    
+                    <div class="audit-features">
+                        <div class="audit-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Technical SEO Analysis</span>
+                        </div>
+                        <div class="audit-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Keyword Performance Review</span>
+                        </div>
+                        <div class="audit-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Content Quality Assessment</span>
+                        </div>
+                        <div class="audit-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Competitor Analysis</span>
+                        </div>
+                        <div class="audit-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Actionable Recommendations</span>
+                        </div>
+                    </div>
+                    
+                    <form id="seoAuditForm" class="audit-form">
+                        <div class="form-group">
+                            <input type="url" name="website" placeholder="Enter your website URL" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Enter your email address" class="form-input" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search"></i>
+                            Get Free SEO Audit
+                        </button>
+        </form>
+                </div>
+                
+                <div class="seo-audit-visual fade-in">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SEO Audit Report" style="width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Visit Our Office</h2>
+                <p class="section-subtitle">Located in the heart of San Francisco's tech district</p>
+            </div>
+            
+            <div class="office-info-grid">
+                <div class="office-content">
+                    <h3>DigitalPro Headquarters</h3>
+                    <p>We're located in the heart of San Francisco's thriving tech district, just minutes away from major tech companies and innovation centers.</p>
+                    
+                    <div class="office-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <p>123 Digital Marketing Ave, Suite 100<br>San Francisco, CA 94105</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Office Hours</strong>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-parking"></i>
+                            <div>
+                                <strong>Parking</strong>
+                                <p>Complimentary parking available<br>Public transit accessible</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="office-cta">
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-directions"></i>
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="map-visual">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8374368168394!2d-122.3985352846813!3d37.77492927975858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7fd4da25855d%3A0x7fb8e1d3d8d1e0d!2s123%20Digital%20Marketing%20Ave%2C%20San%20Francisco%2C%20CA%2094105!5e0!3m2!1sen!2sus!4v1234567890" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0; border-radius: var(--border-radius);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="map-overlay" onclick="window.open('https://www.google.com/maps/search/?api=1&query=123+Digital+Marketing+Ave,+San+Francisco,+CA+94105', '_blank')">
+                            <p><i class="fas fa-external-link-alt"></i> Open in Google Maps</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>How quickly will I hear back from you?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We typically respond to all inquiries within 24 hours during business days. For urgent matters, feel free to call us directly.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Do you offer free consultations?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a free 30-minute consultation to discuss your digital marketing needs and how we can help your business grow.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>What information do I need for the SEO audit?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Just your website URL and email address. Our automated audit will analyze your site and provide a comprehensive report within 24-48 hours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Do you work with businesses outside of San Francisco?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We work with clients worldwide. Most of our communication is done remotely, making location not a barrier to success.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>What's included in the free consultation?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>During the consultation, we'll discuss your business goals, current digital marketing efforts, and provide initial recommendations for improvement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: var(--gradient); color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Ready to Get Started?</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Join hundreds of businesses that have transformed their online presence with our help</p>
+            </div>
+            
+            <div class="text-center">
+                <a href="#contact-form" class="btn btn-white">
+                    <i class="fas fa-rocket"></i>
+                    Start Your Project
+                </a>
+                <a href="pricing.html" class="btn btn-outline-white">
+                    <i class="fas fa-dollar-sign"></i>
+                    View Pricing
+                </a>
+            
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DigitalPro</h3>
+                    <p>We're a full-service digital marketing agency helping businesses grow their online presence through strategic SEO, compelling content, and data-driven marketing campaigns.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+    </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#seo">SEO Optimization</a></li>
+                        <li><a href="services.html#ppc">PPC Advertising</a></li>
+                        <li><a href="services.html#social">Social Media Marketing</a></li>
+                        <li><a href="services.html#content">Content Marketing</a></li>
+                        <li><a href="services.html#email">Email Marketing</a></li>
+                        <li><a href="services.html#design">Web Design</a></li>
+      </ul>
+    </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+      </ul>
+    </div>
+
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest digital marketing tips and insights.</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Enter your email" required class="form-input">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> DigitalPro. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+  </div>
+</footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <script>
+        // Contact page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Contact form handling
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Show loading state
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<span class="loading"></span> Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        
+                        // Show success message
+                        alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                        
+                        // Reset form
+                        this.reset();
+                    }, 2000);
+                });
+            }
+            
+            // SEO Audit form handling
+            const seoAuditForm = document.getElementById('seoAuditForm');
+            if (seoAuditForm) {
+                seoAuditForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Show loading state
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<span class="loading"></span> Analyzing...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate audit process
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        
+                        alert('Your SEO audit is being processed! You\'ll receive the detailed report via email within 24-48 hours.');
+                        
+                        // Reset form
+                        this.reset();
+                    }, 3000);
+                });
+            }
+            
+            // FAQ functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                
+                question.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(faq => {
+                        faq.classList.remove('active');
+                        faq.querySelector('.faq-answer').style.maxHeight = '0';
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
